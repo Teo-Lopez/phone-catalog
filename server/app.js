@@ -10,7 +10,7 @@ const path = require("path");
 const cors = require("cors");
 
 mongoose
-  .connect("mongodb://localhost/server", { useNewUrlParser: true })
+  .connect("mongodb://mongo:27017/mongo-test", { useNewUrlParser: true })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`);
   })
@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["https://phone-catalogue-practice.herokuapp.com/"],
+    origin: ["http://localhost:3000"],
     credentials: true
   })
 );

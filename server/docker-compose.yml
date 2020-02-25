@@ -1,0 +1,25 @@
+version: "2"
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    restart: always
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data-node:/data/db
+    # mongodb:
+    #   image: mongo
+    #   restart: always
+    #   container_name: mongodb
+  #   ports:
+  #     - 27017:27017
+  #   command: mongod --noauth --smallfiles
+  #   networks:
+  #     - webappnetwork

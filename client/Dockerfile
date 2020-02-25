@@ -7,6 +7,6 @@ COPY package*.json /srv/app/client/
 
 RUN npm install
 
-COPY . /srv/app/client
+COPY . /srv/app/client/
 
 CMD ["npm", "start"]

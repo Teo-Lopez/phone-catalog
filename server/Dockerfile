@@ -7,7 +7,7 @@ WORKDIR /srv/app/server
 
 COPY package*.json /srv/app/server
 RUN npm install 
-COPY . /srv/app/server
+COPY . /srv/app/server/
 # add `/app/node_modules/.bin` to $PATH
 #ENV PATH /app/node_modules/.bin:$PATH
 

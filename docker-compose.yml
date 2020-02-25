@@ -1,0 +1,45 @@
+version: "3"
+
+services:
+  server:
+    build: ./server
+    expose: ["${APP_SERVER_PORT}"]
+    environment:
+      API_HOST: ${API_HOST}
+      APP_SERVER_PORT: ${APP_SERVER_PORT}
+    ports:
+      - ${APP_SERVER_PORT}:${APP_SERVER_PORT}
+    volumes:
+      - ./server/src:/srv/app/server/src
+    depends_on:
+      - mongo
+    command: npm run dev
+  client:
+    build: ./client
+    environment:
+      - REACT_APP_PORT=${REACT_APP_PORT}
+    expose: ["${REACT_APP_PORT}"]
+    ports:
+      - ${REACT_APP_PORT}:${REACT_APP_PORT}
+    volumes:
+      - ./client/src:/srv/app/client/src
+      - ./client/public:/srv/app/client/public
+    links:
+      - server
+    command: npm run start
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data-node:/data/db
+    # mongodb:
+    #   image: mongo
+    #   restart: always
+    #   container_name: mongodb
+  #   ports:
+  #     - 27017:27017
+  #   command: mongod --noauth --smallfiles
+  #   networks:
+  #     - webappnetwork

@@ -1,17 +1,17 @@
 # base image
-FROM node:12.13.1
+FROM node:8.7.0-alpine
 
 # set working directory
-WORKDIR /app
+RUN mkdir -p /srv/app/server
+WORKDIR /srv/app/server
 
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
-
-# install and cache app dependencies
-COPY package*.json /app/
+COPY package*.json /srv/app/server
 RUN npm install 
+COPY . /srv/app/server
+# add `/app/node_modules/.bin` to $PATH
+#ENV PATH /app/node_modules/.bin:$PATH
+
 #RUN npm install react-scripts@3.0.1 -g 
-COPY . /app
 # start app
 EXPOSE 5000
-CMD ["npm", "start"]
+CMD ["npm", "run", "dev"]

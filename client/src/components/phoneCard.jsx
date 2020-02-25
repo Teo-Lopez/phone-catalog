@@ -7,7 +7,7 @@ const mapStateToProps = state => {
   return { phone: state.phone, message: state.message, ready: state.ready };
 };
 
-function ConnectedPhoneCard(props) {
+export function UnconnectedPhoneCard(props) {
   useEffect(() => {
     const service = new PhoneService();
     service
@@ -47,6 +47,6 @@ const Img = styled.img`
   width: auto;
 `;
 
-const PhoneCard = connect(mapStateToProps)(ConnectedPhoneCard);
+const PhoneCard = connect(mapStateToProps)(UnconnectedPhoneCard);
 
 export default PhoneCard;

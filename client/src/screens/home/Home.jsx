@@ -9,15 +9,13 @@ const mapStateToProps = state => {
   return { phones: state.phones, message: state.message, ready: state.ready };
 };
 
-class ConnectedHome extends Component {
+export class UnconnectedHome extends Component {
   constructor(props) {
     super(props);
     this.service = new PhoneService();
   }
 
   componentDidMount = () => {
-    console.log("dispatching");
-
     this.service
       .fetchPhones()
       .then(phones => {
@@ -29,7 +27,6 @@ class ConnectedHome extends Component {
   };
 
   render = () => {
-    console.log(this.props);
     return this.props.ready ? (
       <>
         <h1>List of phones</h1>
@@ -85,5 +82,5 @@ const Img = styled.div`
   animation: ${slideIn} 2s ease-out forwards;
 `;
 
-const Home = connect(mapStateToProps)(ConnectedHome);
+const Home = connect(mapStateToProps)(UnconnectedHome);
 export default Home;

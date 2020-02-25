@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`For styling purposes... cols should grow on hover 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <UnconnectedHome
+    message="phones ready"
+    phones={
+      Array [
+        Object {
+          "color": "black",
+          "description": "iPhone 7 dramatically improves the most important aspects of the iPhone experience. It introduces advanced new camera systems. The best performance and battery life ever in an iPhone. Immersive stereo speakers. The brightest, most colorful iPhone display. Splash and water resistance*. And it looks every bit as powerful as it is. This is iPhone 7.",
+          "id": 0,
+          "imageFileName": "IPhone_7.png",
+          "manufacturer": "Apple",
+          "name": "iPhone 7",
+          "price": 769,
+          "processor": "A10 Fusion",
+          "ram": 2,
+          "screen": "4,7 inch IPS",
+        },
+        Object {
+          "color": "grey",
+          "description": "Introducing the smartphone your life can not do without, The Samsung Galaxy S7. Packed with features to keep you both productive and entertained, all in a sleek, slim design that fits comfortably in your hand or pocket.",
+          "id": 1,
+          "imageFileName": "Galaxy_S7.png",
+          "manufacturer": "Samsung",
+          "name": "Galaxy S7",
+          "price": 209,
+          "processor": "Snapdragon 820",
+          "ram": 4,
+          "screen": "5,1 inch Quad-HD",
+        },
+        Object {
+          "color": "blue",
+          "description": "Great phone with an excellent interface. One of the best mid price range phones in the market.",
+          "id": 2,
+          "imageFileName": "Honor_10.png",
+          "manufacturer": "Huawei",
+          "name": "Honor 10",
+          "price": 399,
+          "processor": "Kirin 970",
+          "ram": 6,
+          "screen": "5,84 inch Full-HD",
+        },
+        Object {
+          "color": "white",
+          "description": "Great phone with an excellent interface. One of the best mid price range phones in the market.",
+          "id": 3,
+          "imageFileName": "P10_Lite.jpg",
+          "manufacturer": "Huawei",
+          "name": "P10 Lite",
+          "price": 249,
+          "processor": "Kirin 658",
+          "ram": 4,
+          "screen": "5,2 inch Full-HD",
+        },
+        Object {
+          "color": "black",
+          "description": "Great phone with an excellent interface. One of the best mid price range phones in the market.",
+          "id": 4,
+          "imageFileName": "Nokia_7.1.jpg",
+          "manufacturer": "Nokia",
+          "name": "Nokia 7.1",
+          "price": 275,
+          "processor": "Octa-core",
+          "ram": 4,
+          "screen": "5,84 inch Full-HD",
+        },
+        Object {
+          "color": "black",
+          "description": "Great phone with an excellent interface. One of the best mid price range phones in the market.",
+          "id": 5,
+          "imageFileName": "ZenPhone_5.jpg",
+          "manufacturer": "Asus",
+          "name": "Zen Phone 5",
+          "price": 359,
+          "processor": "Snapdragon 636",
+          "ram": 6,
+          "screen": "6,2 inch Full-HD",
+        },
+        Object {
+          "color": "black",
+          "description": "Great phone with an excellent interface. One of the best mid price range phones in the market.",
+          "id": 6,
+          "imageFileName": "Xiaomi_MI_A2.jpeg",
+          "manufacturer": "Xiaomi",
+          "name": "MI A2",
+          "price": 179,
+          "processor": "Snapdragon 660",
+          "ram": 6,
+          "screen": "5,99 inch Full-HD",
+        },
+        Object {
+          "color": "black",
+          "description": "Great phone with an excellent interface. One of the best mid price range phones in the market.",
+          "id": 7,
+          "imageFileName": "Moto_G6.png",
+          "manufacturer": "Motorola",
+          "name": "Moto G6",
+          "price": 199,
+          "processor": "Snapdragon 450",
+          "ram": 3,
+          "screen": "5,7 inch Full-HD",
+        },
+      ]
+    }
+    ready={true}
+  />
+</Router>
+`;

@@ -1,4 +1,4 @@
-import { UPDATE_PHONES, GET_ONE_PHONE } from "./constants/actionTypes";
+import { UPDATE_PHONES, GET_ONE_PHONE } from "../js/constants/actionTypes";
 
 const initialState = {
   phones: [],

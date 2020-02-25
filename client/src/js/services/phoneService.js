@@ -5,7 +5,7 @@ class PhoneService {
     this.service = axios.create({
       timeout: 10000,
       withCredentials: true,
-      baseURL: "https://phone-catalogue-practice.herokuapp.com/"
+      baseURL: "http://localhost:5000"
     });
   }
 

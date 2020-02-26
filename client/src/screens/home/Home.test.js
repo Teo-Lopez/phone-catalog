@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Enzyme, { shallow } from "enzyme";
 import { UnconnectedHome } from "./Home";
 import renderer from "react-test-renderer";
-import Adapter from "enzyme-adapter-react-16";
+
 import { Spinner, Col } from "react-bootstrap";
 import "jest-styled-components";
 import toJson from "enzyme-to-json";
